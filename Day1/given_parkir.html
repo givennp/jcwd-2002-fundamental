@@ -1,0 +1,35 @@
+<script>
+    let vehicle = prompt(`
+    Jenis kendaraan(pilih sesuai huruf):
+    A. mobil
+    B. motor`)
+    let duration = parseInt(prompt("Durasi parkir (jam) : "));
+    let biaya
+
+    if (vehicle == "mobil" && duration <= 2) {
+        biaya = 5000
+        alert(`Biaya Parkir Anda : ${biaya}`)
+    }
+    if (vehicle == "mobil" && duration > 2) {
+        biaya = 5000 + (duration - 2) * 2000
+        if (biaya < 50000) {
+            alert(`Biaya Parkir Anda : ${biaya}`)
+        }
+        if (biaya >= 50000) {
+            alert(`Biaya Parkir Anda : 50000`)
+        }
+    } else if (vehicle == "motor" && duration <= 2) {
+        biaya = 3000
+        alert(`Biaya Parkir Anda : ${biaya}`)
+
+    } else if (vehicle == "motor" && duration > 2) {
+        biaya = 3000 + (duration - 2) * 1000
+        if (biaya <= 3000) {
+            alert(`Biaya Parkir Anda : ${biaya}`)
+        }
+        if (biaya > 30000)
+            alert(`Biaya Parkir Anda : 30000`)
+    } else {
+        alert("invalid")
+    }
+</script>

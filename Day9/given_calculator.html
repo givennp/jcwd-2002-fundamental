@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Mari Berhitung!</h1>
+    <h2>Hasil: <span id="hasil"></span></h2>
+
+    <label for="input1">First Value:</label>
+    <input id="input1" type="number">
+    <label for="input2">Second Value:</label>
+    <input id="input2" type="number">
+    <br>
+    <br>
+    <button id="tambah" onclick="tambah()">Tambah</button>
+    <button id="kurang" onclick="kurang()">Kurang</button>
+    <button id="kali" onclick="kali()">Kali</button>
+    <button id="bagi" onclick="bagi()">Bagi</button>
+
+    <script>
+
+        const tambah = () => {
+        let inputValue1 = document.getElementById("input1").value;
+        inputValue1 = parseInt(inputValue1)
+
+        let inputValue2 = document.getElementById("input2").value;
+        inputValue2 = parseInt(inputValue2)
+
+        let result = inputValue1 + inputValue2
+
+        document.getElementById("hasil").innerHTML = result
+        }
+
+        const kurang = () => {
+        let inputValue1 = document.getElementById("input1").value;
+        inputValue1 = parseInt(inputValue1)
+
+        let inputValue2 = document.getElementById("input2").value;
+        inputValue2 = parseInt(inputValue2)
+
+        let result = inputValue1 - inputValue2
+
+        document.getElementById("hasil").innerHTML = result
+
+        }
+
+        const kali = () => {
+        let inputValue1 = document.getElementById("input1").value;
+        inputValue1 = parseInt(inputValue1)
+
+        let inputValue2 = document.getElementById("input2").value;
+        inputValue2 = parseInt(inputValue2)
+
+        let result = inputValue1 * inputValue2
+
+        document.getElementById("hasil").innerHTML = result
+
+        }
+
+        const bagi = () => {
+        let inputValue1 = document.getElementById("input1").value;
+        inputValue1 = parseInt(inputValue1)
+
+        let inputValue2 = document.getElementById("input2").value;
+        inputValue2 = parseInt(inputValue2)
+
+        let result = inputValue1 / inputValue2
+
+        document.getElementById("hasil").innerHTML = result
+        
+        }
+
+    
+    </script>
+</body>
+
+</html>

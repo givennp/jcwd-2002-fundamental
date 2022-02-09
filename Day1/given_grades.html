@@ -1,0 +1,54 @@
+<script>
+    let nama = prompt("Nama anda: ");
+    let nim = prompt("Masukkan NIM Anda:");
+    let nilai = parseInt(prompt("Input Nilai Anda:"));
+
+    if (nilai >= 95 && nilai <= 100) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : A+`)
+    } else if (nilai >= 90 && nilai <= 94) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : A`)
+    } else if (nilai >= 85 && nilai <= 89) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : B+`)
+    } else if (nilai >= 80 && nilai <= 84) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : B`)
+    } else if (nilai >= 75 && nilai <= 79) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : C+`)
+    } else if (nilai >= 70 && nilai <= 74) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : C`)
+    } else if (nilai >= 65 && nilai <= 69) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : D+`)
+    } else if (nilai >= 60 && nilai <= 64) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : D`)
+    } else if (nilai >= 0 && nilai <= 59) {
+        alert(`
+        Nama : ${nama} 
+        NIM : ${nim}
+        Grade Anda : F`)
+    } else {
+        alert("Nilai yang anda input INVALID");
+    }
+</script>

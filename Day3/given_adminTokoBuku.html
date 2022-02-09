@@ -1,0 +1,27 @@
+<script>
+    const books = [
+        ["LOTR"],
+        ["Harry Potter"],
+        ["Sherlock"],
+        ["Naruto"],
+        ["One Piece"],
+        ["Doremon"]
+    ];
+
+    do {
+        let menu = ""
+
+        for (i = 0; i < books.length; i++) {
+            menu += `${i + 1}. ${books[i]}\n`
+        }
+
+        let insert = prompt(menu)
+
+        if(insert == "" || insert == null || insert == undefined){
+            break;
+        }
+
+        books.push(insert)
+
+    } while (true)
+</script>

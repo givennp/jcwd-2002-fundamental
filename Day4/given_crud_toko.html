@@ -1,0 +1,101 @@
+<script>
+    // Buat pilihan menu
+    // 1. Create data
+    // 2. Delete data
+    // 3. Show data
+    // 4. Edit data
+    // 5. Exit
+
+    let products = ["Strawberry", "Mangga", "Nanas", "Pisang"];
+    let productsPrice = [10000, 5000, 7000, 8000]
+
+    do {
+        const userMenuInput = prompt(`Menu:
+        1. Tambah data
+        2. Delete data
+        3. Show data
+        4. Edit data
+        5. Exit`);
+
+
+        // Create data 
+        // Nama barang (buah), dan ada harga
+        // 2 kali prompt
+        //  - Nama barang
+        //  - Harga barang
+        if (userMenuInput == "1") {
+            let userInputNewProduct = prompt("Anda mau menambahkan buah apa?");
+            let userInputNewProductPrice = parseInt(prompt(`tentukan harga ${userInputNewProduct}`));
+
+            products.push(userInputNewProduct);
+            productsPrice.push(userInputNewProductPrice);
+
+
+            // Delete data
+            // Pilih barang -> hapus
+        } else if (userMenuInput == "2") {
+            let productsList = "";
+
+            for (let i = 0; i < products.length; i++) {
+                productsList += (i + 1) + ". " + products[i] + " || " + "Rp." +
+                    productsPrice[i].toLocaleString() + "\n"
+            }
+            let userDeleteItemInput = parseInt(prompt(productsList));
+
+            let userDeleteItemIndex = userDeleteItemInput - 1
+
+            products.splice(userDeleteItemIndex, 1);
+
+
+
+            // Show data
+            // Tampilkan nama barang || harganya.
+            // Untuk harga, gunakan Rp./IDR dan separator harga
+        } else if (userMenuInput == "3") {
+            let productsList = ""
+
+            for (let i = 0; i < products.length; i++) {
+                productsList += (i + 1) + ". " + products[i] + " || " + "Rp." +
+                    productsPrice[i].toLocaleString() + "\n"
+            }
+            alert(productsList)
+
+
+
+
+            // Edit data
+            // 3 kali prompt
+            //  - Pilih barang
+            //  - Edit nama barang
+            //  - Edit harga barang
+        } else if (userMenuInput == "4") {
+            let productsList = ""
+
+            for (let i = 0; i < products.length; i++) {
+                productsList += (i + 1) + ". " + products[i] + " || " + "Rp." +
+                    productsPrice[i].toLocaleString() + "\n"
+
+            }
+            // User input nomor urut item (index + 1)
+            let userUpdateProductsInput = parseInt(prompt(productsList));
+
+            // convert nomor urut menjadi index
+            let userUpdateProductsIndex = userUpdateProductsInput - 1;
+
+            let userEdit = prompt(`mau ubah ${products[userUpdateProductsIndex]} jadi?`)
+
+            let userEditPrice = parseInt(prompt(`harga ${userEdit}?`))
+
+            products[userUpdateProductsIndex] = userEdit
+
+            productsPrice[userUpdateProductsIndex] = userEditPrice.toLocaleString();
+
+
+            // Exit
+        } else if (userMenuInput == "5") {
+            alert("babay")
+            break
+        }
+
+    } while (true)
+</script>
